@@ -1,10 +1,9 @@
-// const random = document.querySelector('.random');
 let randomNumber = Math.ceil((Math.random() * 100));
 
 const guessnumber = document.querySelector('.guessnumber');
 const bttn = document.querySelector('.bttn');
 const message = document.querySelector('.message');
-// const newGame = document.querySelector('.newGame')
+
 
 function newGame() {
     setTimeout(function() {
