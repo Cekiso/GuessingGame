@@ -1,5 +1,20 @@
-body {
-    background-color: yellowgreen;
-    text-align: center;
-    font-size: 20px;
-}
+            body {
+                background-color: yellowgreen;
+                text-align: center;
+                font-size: 20px;
+            }
+            
+            .guessnumber {
+                width: 75px;
+                height: 50px;
+                border-color: darkorange;
+                text-align: center;
+                font-size: 30px;
+                color: rgb(205, 50, 179);
+            }
+            
+            .bttn {
+                border-color: darkorange;
+                width: 75px;
+                height: 40px;
+            }

@@ -6,18 +6,41 @@ const message = document.querySelector('.message');
 
 
 function newGame() {
+
+
     setTimeout(function() {
         message.innerHTML = ""
     }, 2000)
 }
 
+function outRange() {
+
+}
 
 function bttnClicked() {
     const guessNo = Number(guessnumber.value);
-    if (guessNo < randomNumber) {
+
+    if (guessNo > 100 || guessNo < 1) {
+        message.innerHTML = 'you have exceeded the range enter a number between 1 & 100';
+
+        setTimeout(function() {
+            location.reload()
+        }, 3000);
+
+
+    } else if (guessNo < randomNumber) {
         message.innerHTML = 'Your guess is too low';
+        setTimeout(function() {
+            message.innerHTML = ""
+        }, 3000)
+
     } else if (guessNo > randomNumber) {
-        message.innerHTML = 'Your guess is too High'
+        message.innerHTML = 'Your guess is too High';
+        setTimeout(function() {
+            message.innerHTML = ""
+        }, 3000)
+
+
 
     } else {
         message.innerHTML = `correct, the secret number is ${guessNo}`
@@ -27,7 +50,7 @@ function bttnClicked() {
             message.innerHTML = ""
             location.reload();
             message.innerHTML = '...new game has started';
-        }, 2000)
+        }, 3000)
     }
 
 
@@ -35,3 +58,4 @@ function bttnClicked() {
 
 bttn.addEventListener('click', bttnClicked)
     // now i have to to start a game without reloading the game
+    //- adding an error message if a user enters a number out of range, e.g 101, 500 or -2
